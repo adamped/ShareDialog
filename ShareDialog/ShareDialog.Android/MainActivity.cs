@@ -1,9 +1,7 @@
 ﻿
 using Android.App;
 using Android.Content.PM;
-using Android.Content.Res;
 using Android.OS;
-using Java.IO;
 using ShareDialog.Droid.Platform;
 using System.IO;
 using Xamarin.Forms;
@@ -11,7 +9,7 @@ using Xamarin.Forms;
 namespace ShareDialog.Droid
 {
 	[Activity(Label = "ShareDialog", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+	public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
 		protected override void OnCreate(Bundle bundle)
 		{
@@ -20,7 +18,7 @@ namespace ShareDialog.Droid
 
 			base.OnCreate(bundle);
 
-			global::Xamarin.Forms.Forms.Init(this, bundle);
+			Forms.Init(this, bundle);
 
 			// Copy image from Assets and place in DataDirectory on Android.
 

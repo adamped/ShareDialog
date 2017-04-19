@@ -15,7 +15,7 @@ namespace ShareDialog.iOS.Platform
 		/// <returns></returns>
 		public async Task Show(string title, string message, string filePath)
 		{
-			var items = new NSObject[] { NSObject.FromObject(title), NSUrl.FromFilename(filePath) }; // TODO: Check that FromObject(title) is correct
+			var items = new NSObject[] { NSObject.FromObject(title), NSUrl.FromFilename(filePath) };
 			var activityController = new UIActivityViewController(items, null);
 			var vc = GetVisibleViewController();
 
